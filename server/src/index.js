@@ -90,7 +90,7 @@ async function start() {
 // Export for testing
 module.exports = app;
 
-// Start if run directly
-if (require.main === module) {
+// Start server - always start when not in test environment
+if (process.env.NODE_ENV !== 'test') {
   start();
 }
