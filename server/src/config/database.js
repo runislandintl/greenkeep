@@ -10,8 +10,24 @@ const tenantConnections = new Map();
  */
 async function connectGlobal() {
   try {
-    await mongoose.connect(`${env.mongodb.uri}/${env.mongodb.globalDb}`);
-    logger.info(`Connected to global database: ${env.mongodb.globalDb}`);
+    // Build connection URI: handle Atlas URIs that may contain query params
+    let uri = env.mongodb.uri;
+    const dbName = env.mongodb.globalDb;
+
+    // If URI has query string (?retryWrites=true&...), insert dbName before it
+    // If URI ends with /, append dbName
+    // Otherwise, append /dbName
+    if (uri.includes('?')) {
+      const [base, query] = uri.split('?');
+      const cleanBase = base.endsWith('/') ? base : base + '/';
+      uri = `${cleanBase}${dbName}?${query}`;
+    } else {
+      const cleanBase = uri.endsWith('/') ? uri : uri + '/';
+      uri = `${cleanBase}${dbName}`;
+    }
+
+    await mongoose.connect(uri);
+    logger.info(`Connected to global database: ${dbName}`);
   } catch (error) {
     logger.error('Failed to connect to global database', { error: error.message });
     throw error;
