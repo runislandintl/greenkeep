@@ -80,7 +80,15 @@ try {
         console.log('Connected to MongoDB Atlas');
       } catch (error) {
         console.error('MongoDB connection error:', error.message);
-        return res.status(500).json({ error: 'Database connection failed' });
+        const uriHint = env.mongodb.uri
+          ? env.mongodb.uri.replace(/\/\/[^@]+@/, '//***@').substring(0, 60) + '...'
+          : 'NOT SET';
+        return res.status(500).json({
+          error: 'Database connection failed',
+          detail: error.message,
+          uriHint,
+          dbName,
+        });
       }
     }
     next();
