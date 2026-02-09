@@ -1,9 +1,17 @@
 {
+  "version": 2,
   "installCommand": "npm install",
   "buildCommand": "npm run build:client",
   "outputDirectory": "client/dist",
   "framework": null,
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30,
+      "includeFiles": "server/**,shared/**"
+    }
+  },
   "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.js" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
