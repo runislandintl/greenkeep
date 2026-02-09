@@ -9,7 +9,7 @@ const {
   registerSchema,
   updateProfileSchema,
   changePasswordSchema,
-} = require('@greenkeep/shared/validation');
+} = require('../../../shared/validation');
 
 // POST /api/v1/auth/login
 router.post('/login', authLimiter, validate(loginSchema), async (req, res, next) => {

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const { LANGUAGES, SUBSCRIPTION_PLANS, SUBSCRIPTION_STATUSES } = require('@greenkeep/shared/constants');
-const { FEATURE_FLAG_DEFAULTS } = require('@greenkeep/shared/featureFlags');
+const { LANGUAGES, SUBSCRIPTION_PLANS, SUBSCRIPTION_STATUSES } = require('../../../shared/constants');
+const { FEATURE_FLAG_DEFAULTS } = require('../../../shared/featureFlagDefaults');
 
 const tenantSchema = new mongoose.Schema(
   {

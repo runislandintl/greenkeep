@@ -3,7 +3,7 @@ const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
 const mongoose = require('mongoose');
 const env = require('../config/env');
 const ApiError = require('../utils/apiError');
-const { ROLES, ROLE_HIERARCHY } = require('@greenkeep/shared/constants');
+const { ROLES, ROLE_HIERARCHY } = require('../../../shared/constants');
 
 // User model (will be registered on global connection)
 let User;

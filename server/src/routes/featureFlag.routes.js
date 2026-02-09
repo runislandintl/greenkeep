@@ -4,8 +4,8 @@ const featureFlagService = require('../services/featureFlag.service');
 const { authenticate, authorize } = require('../middleware/auth');
 const { tenantResolver, requireTenant } = require('../middleware/tenantResolver');
 const validate = require('../middleware/validator');
-const { ROLES } = require('@greenkeep/shared/constants');
-const { featureFlagUpdateSchema } = require('@greenkeep/shared/validation');
+const { ROLES } = require('../../../shared/constants');
+const { featureFlagUpdateSchema } = require('../../../shared/validation');
 
 router.use(authenticate, tenantResolver, requireTenant);
 

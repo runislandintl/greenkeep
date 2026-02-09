@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { MOVEMENT_TYPES } = require('@greenkeep/shared/constants');
+const { MOVEMENT_TYPES } = require('../../../shared/constants');
 
 const inventoryMovementSchema = new mongoose.Schema(
   {

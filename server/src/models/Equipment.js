@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { EQUIPMENT_CATEGORIES, EQUIPMENT_STATUSES } = require('@greenkeep/shared/constants');
+const { EQUIPMENT_CATEGORIES, EQUIPMENT_STATUSES } = require('../../../shared/constants');
 
 const equipmentSchema = new mongoose.Schema(
   {

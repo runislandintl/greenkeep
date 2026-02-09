@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { INVENTORY_CATEGORIES, INVENTORY_UNITS } = require('@greenkeep/shared/constants');
+const { INVENTORY_CATEGORIES, INVENTORY_UNITS } = require('../../../shared/constants');
 
 const inventoryItemSchema = new mongoose.Schema(
   {

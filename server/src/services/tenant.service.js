@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { getTenantDb } = require('../config/database');
-const { FEATURE_FLAG_DEFAULTS } = require('@greenkeep/shared/featureFlags');
+const { FEATURE_FLAG_DEFAULTS } = require('../../../shared/featureFlagDefaults');
 const ApiError = require('../utils/apiError');
 const logger = require('../utils/logger');
 

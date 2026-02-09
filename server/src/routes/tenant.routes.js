@@ -3,8 +3,8 @@ const router = express.Router();
 const tenantService = require('../services/tenant.service');
 const { authenticate, authorize } = require('../middleware/auth');
 const validate = require('../middleware/validator');
-const { ROLES } = require('@greenkeep/shared/constants');
-const { tenantSchema, paginationSchema } = require('@greenkeep/shared/validation');
+const { ROLES } = require('../../../shared/constants');
+const { tenantSchema, paginationSchema } = require('../../../shared/validation');
 
 // All tenant routes require superadmin
 router.use(authenticate, authorize(ROLES.SUPERADMIN));

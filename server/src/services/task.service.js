@@ -1,7 +1,7 @@
 const taskSchema = require('../models/Task');
 const taskTemplateSchema = require('../models/TaskTemplate');
 const auditLogSchema = require('../models/AuditLog');
-const { TASK_STATUSES } = require('@greenkeep/shared/constants');
+const { TASK_STATUSES } = require('../../../shared/constants');
 const ApiError = require('../utils/apiError');
 
 function getTaskModel(tenantDb) {

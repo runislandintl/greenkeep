@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { ZONE_TYPES, ZONE_HEALTH } = require('@greenkeep/shared/constants');
+const { ZONE_TYPES, ZONE_HEALTH } = require('../../../shared/constants');
 
 const zoneSchema = new mongoose.Schema(
   {

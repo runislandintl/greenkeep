@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { getTenantDb } = require('../config/database');
 const ApiError = require('../utils/apiError');
-const { ROLES } = require('@greenkeep/shared/constants');
+const { ROLES } = require('../../../shared/constants');
 
 let Tenant;
 

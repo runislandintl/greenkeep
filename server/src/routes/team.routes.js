@@ -5,8 +5,8 @@ const { authenticate, authorize } = require('../middleware/auth');
 const { tenantResolver, requireTenant } = require('../middleware/tenantResolver');
 const featureGate = require('../middleware/featureGate');
 const validate = require('../middleware/validator');
-const { ROLES } = require('@greenkeep/shared/constants');
-const { teamMemberSchema: teamMemberValidation, paginationSchema } = require('@greenkeep/shared/validation');
+const { ROLES } = require('../../../shared/constants');
+const { teamMemberSchema: teamMemberValidation, paginationSchema } = require('../../../shared/validation');
 
 router.use(authenticate, tenantResolver, requireTenant, featureGate('team'));
 

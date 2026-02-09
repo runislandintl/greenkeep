@@ -7,7 +7,7 @@ const featureGate = require('../middleware/featureGate');
 const validate = require('../middleware/validator');
 const env = require('../config/env');
 const ApiError = require('../utils/apiError');
-const { sensorReadingBatchSchema } = require('@greenkeep/shared/validation');
+const { sensorReadingBatchSchema } = require('../../../shared/validation');
 
 // POST /api/v1/sensors/readings - Uses API key auth (for IoT devices)
 router.post('/readings', async (req, res, next) => {

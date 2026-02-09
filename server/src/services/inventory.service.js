@@ -1,7 +1,7 @@
 const inventoryItemSchema = require('../models/InventoryItem');
 const inventoryMovementSchema = require('../models/InventoryMovement');
 const auditLogSchema = require('../models/AuditLog');
-const { MOVEMENT_TYPES } = require('@greenkeep/shared/constants');
+const { MOVEMENT_TYPES } = require('../../../shared/constants');
 const ApiError = require('../utils/apiError');
 
 function getItemModel(tenantDb) {

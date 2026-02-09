@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { SENSOR_TYPES } = require('@greenkeep/shared/constants');
+const { SENSOR_TYPES } = require('../../../shared/constants');
 
 const sensorReadingSchema = new mongoose.Schema(
   {

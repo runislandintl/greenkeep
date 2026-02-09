@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { ROLES, LANGUAGES } = require('@greenkeep/shared/constants');
+const { ROLES, LANGUAGES } = require('../../../shared/constants');
 
 const userSchema = new mongoose.Schema(
   {

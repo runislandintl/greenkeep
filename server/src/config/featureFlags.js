@@ -1,4 +1,4 @@
-const { FEATURE_FLAG_DEFAULTS } = require('@greenkeep/shared/featureFlags');
+const { FEATURE_FLAG_DEFAULTS } = require('../../../shared/featureFlagDefaults');
 
 /**
  * Resolve feature flags for a tenant

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { TASK_TYPES, TASK_PRIORITIES, TASK_STATUSES, RECURRENCE_PATTERNS } = require('@greenkeep/shared/constants');
+const { TASK_TYPES, TASK_PRIORITIES, TASK_STATUSES, RECURRENCE_PATTERNS } = require('../../../shared/constants');
 
 const taskSchema = new mongoose.Schema(
   {
